@@ -1,0 +1,52 @@
+/* // General Styles */
+img {
+  width: 100%;
+}
+
+/* // Typography */
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5em;
+}
+
+.grid-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* // Flexbox */
+@media (min-width: 768px) {
+  .grid-wrapper {
+    display: flex;
+  }
+
+  #content {
+    margin: 0 4rem 0 1rem;
+  }
+
+  #sidebar {
+    flex: 1 0 300px;
+  }
+}
+
+/* // CSS Grid */
+@supports(display: grid) {
+  @media (min-width: 768px) {
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      grid-template-rows: auto;
+      grid-gap: 4rem;
+    }
+  }
+
+  #content {
+    margin: 0 0 0 1rem;
+  }
+}
